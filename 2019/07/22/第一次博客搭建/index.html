@@ -127,7 +127,7 @@
 <meta property="og:description" content="总结一下自己搭建博客的过程以及一些踩过的坑">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/.com//node+npm.png">
-<meta property="og:updated_time" content="2019-07-22T13:06:50.799Z">
+<meta property="og:updated_time" content="2019-07-22T14:11:18.576Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次搭建博客历程">
 <meta name="twitter:description" content="总结一下自己搭建博客的过程以及一些踩过的坑">
@@ -400,7 +400,15 @@
       
         <p>总结一下自己搭建博客的过程以及一些踩过的坑</p>
 <a id="more"></a>
-<p>首先是安装node.js  下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 选择适合自己的版本<br>打开终端 切换到root用户 sudo su<br>分别输入node -v 和 npm -v 检查是否安装<br><img src="/.com//node+npm.png" alt="(node+npm)"><br>hexo init<br>（待补充）</p>
+<p>首先是安装node.js  下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 选择适合自己的版本<br>打开终端 切换到root用户 sudo su<br>分别输入node -v 和 npm -v 检查是否安装<br><img src="/.com//node+npm.png" alt="(node+npm)"></p>
+<p>下载cnpm<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>这里是用了淘宝的镜像源，速度快一些</p>
+<p>检查cnpm是否安装成功<br>cnpm -v</p>
+<p>全局安装hexo<br>cnpm install -g hexo-cli</p>
+<p>验证<br>hexo -v</p>
+<p>hexo已经安装完了，现在正式搭建。<br>首先建立一个空的文件夹如 /blog<br>进入该文件夹下 cd blog<br>在该目录下初始化博客 sudo hexo init</p>
+<p>启动博客<br>hexo s<br>最后会有一个4000端口 直接复制到浏览器访问</p>
+<p>写博客文章<br>先ctrl+c断开<br>然后输入 hexo n “xxxx”<br>在blog/source/_posts/ 下生成一个.md文件 可用编辑器打开编辑<br>保存后 回到blog根目录<br>输入hexo clean &amp;&amp; hexo g &amp;&amp; hexo s<br>刷新下就可以看见自己写的博文</p>
+<p>把博客部署到github上去<br>注册一个github账号<br>登陆后新建一个仓库(右上角Create a new repository)<br>仓库名称一定为：你的昵称.github.io<br>回到blog目录 打开配置文件_config.yml<br>拉到最后发现deploy:<br>修改如下(注意每个冒号后有一个空格)<br>        type: git<br>        repo: 你github的地址 如：https//github.com//bmxhaoshuai1999.github.io.git<br>        branch: master<br>回到blog 输入 hexo d<br>此时博客已经部署到远端，仓库中有了博客的内容<br>在浏览器输入你的仓库名如：https//github.com//bmxhaoshuai1999.github 发现已经可以访问<br>（待补充）</p>
 
       
     </div>
@@ -620,7 +628,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共76字</span>
+  <span class="post-count">博客全站共417字</span>
 </div>
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
