@@ -95,10 +95,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -107,7 +107,7 @@
 
 
 
-  <meta name="keywords" content="Markdown,hexo,">
+  <meta name="keywords" content="hexo,Markdown,">
 
 
 
@@ -118,20 +118,26 @@
 
 
 
-<meta name="description" content="总结一下自己搭建博客的过程以及一些踩过的坑">
-<meta name="keywords" content="Markdown,hexo">
+<meta name="description" content="总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）">
+<meta name="keywords" content="hexo,Markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一次搭建博客历程">
 <meta property="og:url" content="http://yoursite.com/2019/07/22/第一次博客搭建/index.html">
 <meta property="og:site_name" content="bmx的博客">
-<meta property="og:description" content="总结一下自己搭建博客的过程以及一些踩过的坑">
+<meta property="og:description" content="总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/.com//node+npm.png">
-<meta property="og:updated_time" content="2019-07-22T14:11:18.576Z">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/node+npm.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/cnpm.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/hexo.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/4000.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/new.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/name.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/last.png">
+<meta property="og:updated_time" content="2019-07-23T04:12:54.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次搭建博客历程">
-<meta name="twitter:description" content="总结一下自己搭建博客的过程以及一些踩过的坑">
-<meta name="twitter:image" content="http://yoursite.com/.com//node+npm.png">
+<meta name="twitter:description" content="总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）">
+<meta name="twitter:image" content="http://pv2rbuaxo.bkt.clouddn.com/node+npm.png">
 
 
 
@@ -375,11 +381,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv">本文总阅读量
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
-            </span>
-          
 
           
 
@@ -398,24 +399,70 @@
       
 
       
-        <p>总结一下自己搭建博客的过程以及一些踩过的坑</p>
+        <p>总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）</p>
 <a id="more"></a>
-<p>首先是安装node.js  下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 选择适合自己的版本<br>打开终端 切换到root用户 sudo su<br>分别输入node -v 和 npm -v 检查是否安装<br><img src="/.com//node+npm.png" alt="(node+npm)"></p>
-<p>下载cnpm<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>这里是用了淘宝的镜像源，速度快一些</p>
-<p>检查cnpm是否安装成功<br>cnpm -v</p>
-<p>全局安装hexo<br>cnpm install -g hexo-cli</p>
-<p>验证<br>hexo -v</p>
-<p>hexo已经安装完了，现在正式搭建。<br>首先建立一个空的文件夹如 /blog<br>进入该文件夹下 cd blog<br>在该目录下初始化博客 sudo hexo init</p>
-<p>启动博客<br>hexo s<br>最后会有一个4000端口 直接复制到浏览器访问</p>
-<p>写博客文章<br>先ctrl+c断开<br>然后输入 hexo n “xxxx”<br>在blog/source/_posts/ 下生成一个.md文件 可用编辑器打开编辑<br>保存后 回到blog根目录<br>输入hexo clean &amp;&amp; hexo g &amp;&amp; hexo s<br>刷新下就可以看见自己写的博文</p>
-<p>把博客部署到github上去<br>注册一个github账号<br>登陆后新建一个仓库(右上角Create a new repository)<br>仓库名称一定为：你的昵称.github.io<br>回到blog目录 打开配置文件_config.yml<br>拉到最后发现deploy:<br>修改如下(注意每个冒号后有一个空格)<br>        type: git<br>        repo: 你github的地址 如：https//github.com//bmxhaoshuai1999.github.io.git<br>        branch: master<br>回到blog 输入 hexo d<br>此时博客已经部署到远端，仓库中有了博客的内容<br>在浏览器输入你的仓库名如：https//github.com//bmxhaoshuai1999.github 发现已经可以访问<br>（待补充）</p>
+<h2 id="下载配置"><a href="#下载配置" class="headerlink" title="下载配置"></a>下载配置</h2><p>首先是安装node.js  下载地址：<code>https://nodejs.org/en/</code> 选择适合自己的版本<br>打开终端 切换到root用户 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+
+<p>分别输入<code>node -v</code> 和 <code>npm -v</code> 检查是否安装成功<br><img src="http://pv2rbuaxo.bkt.clouddn.com/node+npm.png" alt="(node+npm)"></p>
+<p>借助npm下载cnpm</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>这里是用了淘宝的镜像源，速度快一些</p>
+<p>检查cnpm是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pv2rbuaxo.bkt.clouddn.com/cnpm.png" alt><br>全局安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>验证是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pv2rbuaxo.bkt.clouddn.com/hexo.png" alt></p>
+<h2 id="hexo博客搭建"><a href="#hexo博客搭建" class="headerlink" title="hexo博客搭建"></a>hexo博客搭建</h2><p>hexo已经安装完了，现在正式搭建。<br>首先建立一个空的文件夹如 <code>/blog</code>进入该文件夹下 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
+
+<p>在该目录下初始化博客 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo hexo init</span><br></pre></td></tr></table></figure>
+
+<p>启动博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>最后会有一个4000端口 直接复制到浏览器访问<br><img src="http://pv2rbuaxo.bkt.clouddn.com/4000.png" alt></p>
+<h2 id="写博客文章"><a href="#写博客文章" class="headerlink" title="写博客文章"></a>写博客文章</h2><p>先ctrl+c断开<br>然后输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;xxxx&quot;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>blog/source/_posts/</code> 下生成一个.md文件 可用编辑器打开编辑(建议去学习一下Markdown标记语法)<br>保存后 回到blog根目录 输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>刷新下就可以看见自己写的博文</p>
+<h2 id="将博客部署到远端"><a href="#将博客部署到远端" class="headerlink" title="将博客部署到远端"></a>将博客部署到远端</h2><p>把博客部署到github上去，此过程是不需要域名和自己的服务器的，今后会讲到如何部署到自己的服务器<br>注册一个github账号，登陆后新建一个仓库(右上角Create a new repository)<br><img src="http://pv2rbuaxo.bkt.clouddn.com/new.png" alt><br>仓库名称一定为：<code>你的昵称.github.io</code>（一定得是这种格式，之后才能访问）<br><img src="http://pv2rbuaxo.bkt.clouddn.com/name.png" alt><br>回到blog目录 打开配置文件<code>_config.yml</code><br>拉到最后找到deploy:<br>修改如下(注意每个冒号后有一个空格)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   type: git</span><br><span class="line">repo: 你github的地址 如：https//github.com//bmxhaoshuai1999.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+
+<p>回到blog目录下输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>等待片刻后博客已经部署到远端，仓库中有了博客的内容<br><img src="http://pv2rbuaxo.bkt.clouddn.com/last.png" alt><br>在浏览器输入你的仓库名如：<code>https//github.com//bmxhaoshuai1999.github</code> 发现已经可以访问（无法访问刷新多几次）</p>
+<h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开博客目录下的_config.yml文件，可以根据自己的要求更改站点的一些内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: bmx的博客  //站点标题</span><br><span class="line">subtitle: Fighting for everyday!  //站点副标题</span><br><span class="line">description: 记住迄今为止每一次失败时有心无力的感受，&quot;为更美好的明天而战&quot; //站点描述</span><br><span class="line">keywords:  //博客关键字</span><br><span class="line">author: Bmx  //作者</span><br><span class="line">language: zh-Hans  //语言</span><br><span class="line">timezone: Asia/Shanghai  //时区</span><br></pre></td></tr></table></figure>
+
+<p>喜欢的话支持一下吧😆<br>（待补充）</p>
 
       
     </div>
     
     
     
-
+    
+    <div>
+      
+      <div>
+	
+		<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+	
+</div>
+      
+    </div>
     
 
     
@@ -450,9 +497,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"> Markdown</i></a>
-          
             <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"> hexo</i></a>
+          
+            <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"> Markdown</i></a>
           
         </div>
       
@@ -461,6 +508,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/23/主题更换/" rel="prev" title="hexo主题的更换">
+                hexo主题的更换 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -509,8 +572,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -527,7 +599,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -549,7 +621,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -583,6 +655,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载配置"><span class="nav-number">1.</span> <span class="nav-text">下载配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo博客搭建"><span class="nav-number">2.</span> <span class="nav-text">hexo博客搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客文章"><span class="nav-number">3.</span> <span class="nav-text">写博客文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将博客部署到远端"><span class="nav-number">4.</span> <span class="nav-text">将博客部署到远端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客的基本配置"><span class="nav-number">5.</span> <span class="nav-text">博客的基本配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
         <div class="back-to-top">
@@ -603,7 +691,8 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -613,7 +702,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -628,7 +717,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共417字</span>
+  <span class="post-count">博客全站共1.1k字</span>
 </div>
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
 <script>
@@ -647,24 +736,17 @@
     } 
 setInterval("createtime()",250);
 </script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
         
 <div class="busuanzi-count">
   <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
-    <span class="site-uv">
-      本站总访客数
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      人次
-    </span>
-  
 
-  
-    <span class="site-pv">
-      本站总访问量
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      次
-    </span>
   
 </div>
 
