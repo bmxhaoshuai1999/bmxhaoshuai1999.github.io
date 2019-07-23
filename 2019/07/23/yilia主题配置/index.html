@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="yilia,hexo,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题">
+<meta name="keywords" content="yilia,hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yilia主题配置以及问题处理">
+<meta property="og:url" content="http://yoursite.com/2019/07/23/yilia主题配置/index.html">
+<meta property="og:site_name" content="bmx的博客">
+<meta property="og:description" content="之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/yilia_peizhierror.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/baocuo.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/geshi.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/peiok.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/love.png">
+<meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/%E7%9C%8B%E6%9D%BF%E5%A8%98.png">
+<meta property="og:updated_time" content="2019-07-23T05:42:27.644Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yilia主题配置以及问题处理">
+<meta name="twitter:description" content="之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题">
+<meta name="twitter:image" content="http://pv2rbuaxo.bkt.clouddn.com/yilia_peizhierror.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/07/23/yilia主题配置/">
+
+
+
+
+
+  <title>yilia主题配置以及问题处理 | bmx的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">bmx的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Fighting for everyday!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/23/yilia主题配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bmx">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/bmx.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="bmx的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">yilia主题配置以及问题处理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-23T00:00:00+08:00">
+                2019-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题</p>
+<a id="more"></a>
+<h1 id="配置缺失模块"><a href="#配置缺失模块" class="headerlink" title="配置缺失模块"></a>配置缺失模块</h1><p>从GitHub上面clone下来主题后，点开左边的全部文章，无法正常显示，里面也有解决办法，需要配置一些代码。<br><img src="http://pv2rbuaxo.bkt.clouddn.com/yilia_peizhierror.png" alt><br>在博客目录下运行命令行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-gennerator-json-content --save</span><br></pre></td></tr></table></figure>
+
+<p>如果这个包已经存在，会报错<br><img src="http://pv2rbuaxo.bkt.clouddn.com/baocuo.png" alt><br>博客根目录下，找到<code>_config.yml</code>，打开找到一个空白的地方复制一下配置信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">	meta: false</span><br><span class="line">	pages: false</span><br><span class="line">	posts:</span><br><span class="line">		title: true</span><br><span class="line">		date: true</span><br><span class="line">		path: true</span><br><span class="line">		text: false</span><br><span class="line">		raw: false</span><br><span class="line">		content: false</span><br><span class="line">		slug: false</span><br><span class="line">		updated: false</span><br><span class="line">		comments: false</span><br><span class="line">		link: false</span><br><span class="line">		permalink: false</span><br><span class="line">		excerpt: false</span><br><span class="line">		categories: false</span><br><span class="line">		tags: true</span><br></pre></td></tr></table></figure>
+
+<p>如果报错可能是格式问题<br><img src="http://pv2rbuaxo.bkt.clouddn.com/geshi.png" alt><br>保存同步文件再看你的博客，点全部文章按钮，发现已修复<br><img src="http://pv2rbuaxo.bkt.clouddn.com/peiok.png" alt></p>
+<h1 id="配置图片资源"><a href="#配置图片资源" class="headerlink" title="配置图片资源"></a>配置图片资源</h1><h2 id="添加图片资源文件夹"><a href="#添加图片资源文件夹" class="headerlink" title="添加图片资源文件夹"></a>添加图片资源文件夹</h2><p>路径为<code>themes/yilia/source/</code>下，可以添加一个imags文件夹，里面放图片资源即可</p>
+<h2 id="配置文件中直接引用即可"><a href="#配置文件中直接引用即可" class="headerlink" title="配置文件中直接引用即可"></a>配置文件中直接引用即可</h2><p>路径为<code>themes/yilia/_config.yml</code>，找到如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg</span><br><span class="line">alipay: </span><br><span class="line"># 微信二维码图片地址</span><br><span class="line">weixin: </span><br><span class="line">#你的头像url</span><br><span class="line">avatar:</span><br></pre></td></tr></table></figure>
+
+<p>根据自己的路径填写</p>
+<h1 id="文章截断（显示摘要）"><a href="#文章截断（显示摘要）" class="headerlink" title="文章截断（显示摘要）"></a>文章截断（显示摘要）</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>点击主页时，发现所有文章全都是全文显示，不利于查找，可控制显示的字数</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>在你md格式文章想要截断的位置插入<code>&lt;!-- more --&gt;</code>即可 ,只会显示之前的，之后的需要点击阅读全文才会显示，同时注释掉以下themes/yilia/_config.yml，如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 文章太长，截断按钮文字</span><br><span class="line">#excerpt_link: more</span><br></pre></td></tr></table></figure>
+
+<h1 id="增加归档菜单"><a href="#增加归档菜单" class="headerlink" title="增加归档菜单"></a>增加归档菜单</h1><p>修改<code>themes/yilia/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	主页: /</span><br><span class="line">	归档: /archives/index.html</span><br></pre></td></tr></table></figure>
+
+<h1 id="增加不蒜子统计"><a href="#增加不蒜子统计" class="headerlink" title="增加不蒜子统计"></a>增加不蒜子统计</h1><p>利用这个统计，可以知道你博客的访问量</p>
+<h2 id="安装不蒜子脚本"><a href="#安装不蒜子脚本" class="headerlink" title="安装不蒜子脚本"></a>安装不蒜子脚本</h2><p>在<code>themes\yilia\layout\_partial\after-footer.ejs</code>最后添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  async  src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加统计网站访问量"><a href="#添加统计网站访问量" class="headerlink" title="添加统计网站访问量"></a>添加统计网站访问量</h2><p>修改<code>themes\yilia\layout\_partial\footer.ejs</code>,包括访客数和站点访问总量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># PV方式，单个用户连续点击 n 篇，记录 n 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;    本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line"></span><br><span class="line"># UV方式，单个用户连续点击 n 篇，记录 1 次记录值</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;  本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;人次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单篇文章点击"><a href="#单篇文章点击" class="headerlink" title="单篇文章点击"></a>单篇文章点击</h2><p>修改<code>themes\yilia\layout\_partial\footer.ejs</code>在需要显示的地方添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用 pv 记录方式，每访问一次，记录一次</span><br><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="添加鼠标点击爱心效果"><a href="#添加鼠标点击爱心效果" class="headerlink" title="添加鼠标点击爱心效果"></a>添加鼠标点击爱心效果</h1><p>在<code>themes/yilia/source/js</code>下新建文件<code>love.js</code>。在<code>love.js</code>文件中添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+
+<p>在<code>themes/yilia/layout/layout.ejs</code>文件末尾添加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://pv2rbuaxo.bkt.clouddn.com/love.png" alt></p>
+<h1 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h1><p><img src="http://pv2rbuaxo.bkt.clouddn.com/%E7%9C%8B%E6%9D%BF%E5%A8%98.png" alt></p>
+<h2 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h2><p>hexo博客目录下输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<p>作者提供了很多模型包<code>https://huaji8.top/post/live2d-plugin-2.0/</code>选择你想要用的模型。记住名字</p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>在hexo博客目录下输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-koharu</span><br></pre></td></tr></table></figure>
+
+<p>等他安装完就完事了</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>打开hexo博客目录下的<code>_config.yml</code>文件，在最后添加一下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">	enable: true</span><br><span class="line">	scriptFrom: local</span><br><span class="line">	pluginRootPath: live2dw/</span><br><span class="line">	pluginJsPath: lib/</span><br><span class="line">	pluginModelPath: assets/</span><br><span class="line">	tagMode: false</span><br><span class="line">	debug: false</span><br><span class="line">	model:</span><br><span class="line">		use: live2d-widget-model-koharu</span><br><span class="line">	display:</span><br><span class="line">		position: right</span><br><span class="line">		width: 150</span><br><span class="line">		height: 300</span><br><span class="line">	mobile:</span><br><span class="line">		show: true</span><br></pre></td></tr></table></figure>
+
+<p>use后为你选择的包的名字</p>
+<h2 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h2><p>本地预览</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<p>博客部署</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>喜欢的话支持一下吧😆</p>
+
+      
+    </div>
+    
+    
+    
+    
+    <div>
+      
+      <div>
+	
+		<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+	
+</div>
+      
+    </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>感谢你的糖果</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Bmx 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/yilia/" rel="tag"><i class="fa fa-tag"> yilia</i></a>
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"> hexo</i></a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/23/主题更换/" rel="next" title="hexo主题的更换">
+                <i class="fa fa-chevron-left"></i> hexo主题的更换
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/bmx.jpg" alt="Bmx">
+            
+              <p class="site-author-name" itemprop="name">Bmx</p>
+              <p class="site-description motion-element" itemprop="description">记住迄今为止每一次失败时有心无力的感受，"为更美好的明天而战"</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/bmxhaoshuai1999" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置缺失模块"><span class="nav-number">1.</span> <span class="nav-text">配置缺失模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置图片资源"><span class="nav-number">2.</span> <span class="nav-text">配置图片资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加图片资源文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">添加图片资源文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件中直接引用即可"><span class="nav-number">2.2.</span> <span class="nav-text">配置文件中直接引用即可</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章截断（显示摘要）"><span class="nav-number">3.</span> <span class="nav-text">文章截断（显示摘要）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">3.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加归档菜单"><span class="nav-number">4.</span> <span class="nav-text">增加归档菜单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加不蒜子统计"><span class="nav-number">5.</span> <span class="nav-text">增加不蒜子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装不蒜子脚本"><span class="nav-number">5.1.</span> <span class="nav-text">安装不蒜子脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加统计网站访问量"><span class="nav-number">5.2.</span> <span class="nav-text">添加统计网站访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单篇文章点击"><span class="nav-number">5.3.</span> <span class="nav-text">单篇文章点击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加鼠标点击爱心效果"><span class="nav-number">6.</span> <span class="nav-text">添加鼠标点击爱心效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加看板娘"><span class="nav-number">7.</span> <span class="nav-text">添加看板娘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装模块"><span class="nav-number">7.1.</span> <span class="nav-text">安装模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">7.2.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">7.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果预览"><span class="nav-number">7.4.</span> <span class="nav-text">效果预览</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bmx</span>
+
+  
+</div>
+
+
+   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共2.4k字</span>
+</div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("7/21/2019 12:00:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = " Runing "+dnum+" D "; 
+        document.getElementById("times").innerHTML = hnum + " H " + mnum + " M " + snum + " S"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+  
+  <style>
+	.copy-btn {
+		display: inline-block;
+		padding: 6px 12px;
+		font-size: 13px;
+		font-weight: 700;
+		line-height: 20px;
+		color: #333;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		background-color: #eee;
+		background-image: linear-gradient(#fcfcfc, #eee);
+		border: 1px solid #d5d5d5;
+		border-radius: 3px;
+		user-select: none;
+		outline: 0;
+	}
+
+	.highlight-wrap .copy-btn {
+		transition: opacity .3s ease-in-out;
+		opacity: 0;
+		padding: 2px 6px;
+		position: absolute;
+		right: 4px;
+		top: 8px;
+	}
+
+	.highlight-wrap:hover .copy-btn,
+	.highlight-wrap .copy-btn:focus {
+		opacity: 1
+	}
+
+	.highlight-wrap {
+		position: relative;
+	}
+</style>
+
+<script>
+	$('.highlight').each(function (i, e) {
+		var $wrap = $('<div>').addClass('highlight-wrap')
+		$(e).after($wrap)
+		$wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+			var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+				return $(e).text()
+			}).toArray().join('\n')
+			var ta = document.createElement('textarea')
+			document.body.appendChild(ta)
+			ta.style.position = 'absolute'
+			ta.style.top = '0px'
+			ta.style.left = '0px'
+			ta.value = code
+			ta.select()
+			ta.focus()
+			var result = document.execCommand('copy')
+			document.body.removeChild(ta)
+
+			if(result)$(this).text('复制成功')
+			else $(this).text('复制失败')
+
+			$(this).blur()
+		})).on('mouseleave', function (e) {
+			var $b = $(this).find('.copy-btn')
+			setTimeout(function () {
+				$b.text('复制')
+			}, 300)
+		}).append(e)
+	})
+</script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
