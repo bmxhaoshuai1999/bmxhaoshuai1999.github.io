@@ -107,7 +107,7 @@
 
 
 
-  <meta name="keywords" content="Markdown,hexo,">
+  <meta name="keywords" content="hexo,Markdown,">
 
 
 
@@ -119,7 +119,7 @@
 
 
 <meta name="description" content="总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）">
-<meta name="keywords" content="Markdown,hexo">
+<meta name="keywords" content="hexo,Markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一次搭建博客历程">
 <meta property="og:url" content="http://yoursite.com/2019/07/22/第一次博客搭建/index.html">
@@ -133,7 +133,7 @@
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/new.png">
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/name.png">
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/last.png">
-<meta property="og:updated_time" content="2019-07-23T04:12:54.386Z">
+<meta property="og:updated_time" content="2019-07-24T08:56:42.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一次搭建博客历程">
 <meta name="twitter:description" content="总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）">
@@ -442,7 +442,7 @@
       
         <p>总结一下自己搭建博客的过程以及一些踩过的坑（这里以MacOs为例，其他系统命令行略微差异）</p>
 <a id="more"></a>
-<h2 id="下载配置"><a href="#下载配置" class="headerlink" title="下载配置"></a>下载配置</h2><p>首先是安装node.js  下载地址：<code>https://nodejs.org/en/</code> 选择适合自己的版本<br>打开终端 切换到root用户 </p>
+<h1 id="1-下载配置"><a href="#1-下载配置" class="headerlink" title="1.下载配置"></a>1.下载配置</h1><p>首先是安装<code>node.js</code>  下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> 选择适合自己的版本<br>打开终端 切换到root用户 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
 
 <p>分别输入<code>node -v</code> 和 <code>npm -v</code> 检查是否安装成功<br><img src="http://pv2rbuaxo.bkt.clouddn.com/node+npm.png" alt="(node+npm)"></p>
@@ -460,7 +460,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
 
 <p><img src="http://pv2rbuaxo.bkt.clouddn.com/hexo.png" alt></p>
-<h2 id="hexo博客搭建"><a href="#hexo博客搭建" class="headerlink" title="hexo博客搭建"></a>hexo博客搭建</h2><p>hexo已经安装完了，现在正式搭建。<br>首先建立一个空的文件夹如 <code>/blog</code>进入该文件夹下 </p>
+<hr>
+<h1 id="2-hexo博客搭建"><a href="#2-hexo博客搭建" class="headerlink" title="2.hexo博客搭建"></a>2.hexo博客搭建</h1><p>hexo已经安装完了，现在正式搭建。<br>首先建立一个空的文件夹如 <code>/blog</code>进入该文件夹下 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure>
 
 <p>在该目录下初始化博客 </p>
@@ -470,21 +471,24 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>最后会有一个4000端口 直接复制到浏览器访问<br><img src="http://pv2rbuaxo.bkt.clouddn.com/4000.png" alt></p>
-<h2 id="写博客文章"><a href="#写博客文章" class="headerlink" title="写博客文章"></a>写博客文章</h2><p>先ctrl+c断开<br>然后输入</p>
+<hr>
+<h1 id="3-写博客文章"><a href="#3-写博客文章" class="headerlink" title="3.写博客文章"></a>3.写博客文章</h1><p>先ctrl+c断开<br>然后输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;xxxx&quot;</span><br></pre></td></tr></table></figure>
 
 <p>在<code>blog/source/_posts/</code> 下生成一个.md文件 可用编辑器打开编辑(建议去学习一下Markdown标记语法)<br>保存后 回到blog根目录 输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 
 <p>刷新下就可以看见自己写的博文</p>
-<h2 id="将博客部署到远端"><a href="#将博客部署到远端" class="headerlink" title="将博客部署到远端"></a>将博客部署到远端</h2><p>把博客部署到github上去，此过程是不需要域名和自己的服务器的，今后会讲到如何部署到自己的服务器<br>注册一个github账号，登陆后新建一个仓库(右上角Create a new repository)<br><img src="http://pv2rbuaxo.bkt.clouddn.com/new.png" alt><br>仓库名称一定为：<code>你的昵称.github.io</code>（一定得是这种格式，之后才能访问）<br><img src="http://pv2rbuaxo.bkt.clouddn.com/name.png" alt><br>回到blog目录 打开配置文件<code>_config.yml</code><br>拉到最后找到deploy:<br>修改如下(注意每个冒号后有一个空格)</p>
+<hr>
+<h1 id="4-将博客部署到远端"><a href="#4-将博客部署到远端" class="headerlink" title="4.将博客部署到远端"></a>4.将博客部署到远端</h1><p>把博客部署到github上去，此过程是不需要域名和自己的服务器的，今后会讲到如何部署到自己的服务器<br>注册一个github账号，登陆后新建一个仓库(右上角Create a new repository)<br><img src="http://pv2rbuaxo.bkt.clouddn.com/new.png" alt><br>仓库名称一定为：<code>你的昵称.github.io</code>（一定得是这种格式，之后才能访问）<br><img src="http://pv2rbuaxo.bkt.clouddn.com/name.png" alt><br>回到blog目录 打开配置文件<code>_config.yml</code><br>拉到最后找到deploy:<br>修改如下(注意每个冒号后有一个空格)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   type: git</span><br><span class="line">repo: 你github的地址 如：https//github.com//bmxhaoshuai1999.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
 
 <p>回到blog目录下输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>等待片刻后博客已经部署到远端，仓库中有了博客的内容<br><img src="http://pv2rbuaxo.bkt.clouddn.com/last.png" alt><br>在浏览器输入你的仓库名如：<code>https//github.com//bmxhaoshuai1999.github</code> 发现已经可以访问（无法访问刷新多几次）</p>
-<h2 id="博客的基本配置"><a href="#博客的基本配置" class="headerlink" title="博客的基本配置"></a>博客的基本配置</h2><p>打开博客目录下的_config.yml文件，可以根据自己的要求更改站点的一些内容</p>
+<hr>
+<h1 id="5-博客的基本配置"><a href="#5-博客的基本配置" class="headerlink" title="5.博客的基本配置"></a>5.博客的基本配置</h1><p>打开博客目录下的_config.yml文件，可以根据自己的要求更改站点的一些内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: bmx的博客  //站点标题</span><br><span class="line">subtitle: Fighting for everyday!  //站点副标题</span><br><span class="line">description: 记住迄今为止每一次失败时有心无力的感受，&quot;为更美好的明天而战&quot; //站点描述</span><br><span class="line">keywords:  //博客关键字</span><br><span class="line">author: Bmx  //作者</span><br><span class="line">language: zh-Hans  //语言</span><br><span class="line">timezone: Asia/Shanghai  //时区</span><br></pre></td></tr></table></figure>
 
 <p>喜欢的话支持一下吧😆<br>（待补充）</p>
@@ -556,9 +560,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"> Markdown</i></a>
-          
             <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"> hexo</i></a>
+          
+            <a href="/tags/Markdown/" rel="tag"><i class="fa fa-tag"> Markdown</i></a>
           
         </div>
       
@@ -732,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载配置"><span class="nav-number">1.</span> <span class="nav-text">下载配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo博客搭建"><span class="nav-number">2.</span> <span class="nav-text">hexo博客搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写博客文章"><span class="nav-number">3.</span> <span class="nav-text">写博客文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将博客部署到远端"><span class="nav-number">4.</span> <span class="nav-text">将博客部署到远端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客的基本配置"><span class="nav-number">5.</span> <span class="nav-text">博客的基本配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-下载配置"><span class="nav-number">1.</span> <span class="nav-text">1.下载配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-hexo博客搭建"><span class="nav-number">2.</span> <span class="nav-text">2.hexo博客搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-写博客文章"><span class="nav-number">3.</span> <span class="nav-text">3.写博客文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-将博客部署到远端"><span class="nav-number">4.</span> <span class="nav-text">4.将博客部署到远端</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-博客的基本配置"><span class="nav-number">5.</span> <span class="nav-text">5.博客的基本配置</span></a></li></ol></div>
             
 
           </div>

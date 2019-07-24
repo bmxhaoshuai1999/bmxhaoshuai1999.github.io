@@ -127,7 +127,7 @@
 <meta property="og:description" content="在搭建好自己的博客后会使用默认的landscape主题，是不是丑爆了，这次来说下我是如何更换主题的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/hexothemes.png">
-<meta property="og:updated_time" content="2019-07-23T04:12:59.245Z">
+<meta property="og:updated_time" content="2019-07-24T09:06:20.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo主题的更换">
 <meta name="twitter:description" content="在搭建好自己的博客后会使用默认的landscape主题，是不是丑爆了，这次来说下我是如何更换主题的">
@@ -436,8 +436,9 @@
       
         <p> 在搭建好自己的博客后会使用默认的landscape主题，是不是丑爆了，这次来说下我是如何更换主题的</p>
 <a id="more"></a>
-<h1 id="主题的选择"><a href="#主题的选择" class="headerlink" title="主题的选择"></a>主题的选择</h1><p>现在流行的主题有yilia、next等。我们可以去hexo主题官网去挑选自己喜欢的主题风格。里边收录了很多牛人的主题。<br><img src="http://pv2rbuaxo.bkt.clouddn.com/hexothemes.png" alt><br>选择一个你喜欢的主题，每个主题在GitHub上面都有开源的代码。下边我选择yilia主题为例来介绍</p>
-<h1 id="下载和切换主题"><a href="#下载和切换主题" class="headerlink" title="下载和切换主题"></a>下载和切换主题</h1><p>首先我们进入到你的本地博客目录下的themes，克隆你选择的主题从GitHub仓库到本地</p>
+<h1 id="1-主题的选择"><a href="#1-主题的选择" class="headerlink" title="1.主题的选择"></a>1.主题的选择</h1><p>现在流行的主题有<code>yilia</code>、<code>next</code>等。我们可以去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题官网</a>去挑选自己喜欢的主题风格。里边收录了很多牛人的主题。<br><img src="http://pv2rbuaxo.bkt.clouddn.com/hexothemes.png" alt><br>选择一个你喜欢的主题，每个主题在GitHub上面都有开源的代码。下边我选择yilia主题为例来介绍</p>
+<hr>
+<h1 id="2-下载和切换主题"><a href="#2-下载和切换主题" class="headerlink" title="2.下载和切换主题"></a>2.下载和切换主题</h1><p>首先我们进入到你的本地博客目录下的<code>themes</code>，克隆你选择的主题从GitHub仓库到本地</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 
 <p>下载完成后在themes就可以看到你新下载的主题<br>然后修改你博客目录下的_config.yml文件里的theme配置来更换使用的主题</p>
@@ -446,7 +447,8 @@
 <p>然后，重新编译，启动</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 
-<h1 id="主题的配置"><a href="#主题的配置" class="headerlink" title="主题的配置"></a>主题的配置</h1><p>yilia主题就在themes目录下了，yilia目录下的_config.yml主要是一些主题配置，可以根据自己的需要修改</p>
+<hr>
+<h1 id="3-主题的配置"><a href="#3-主题的配置" class="headerlink" title="3.主题的配置"></a>3.主题的配置</h1><p><code>yilia</code>主题就在<code>themes</code>目录下了，<code>yilia</code>目录下的<code>_config.yml</code>主要是一些主题配置，可以根据自己的需要修改</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"># Header</span><br><span class="line"></span><br><span class="line">menu:</span><br><span class="line">	主页: /</span><br><span class="line">	随笔: /tags/随笔/</span><br><span class="line"></span><br><span class="line"># SubNav</span><br><span class="line">subnav:</span><br><span class="line">	github: &quot;#&quot;</span><br><span class="line">	weibo: &quot;#&quot;</span><br><span class="line">	rss: &quot;#&quot;</span><br><span class="line">	zhihu: &quot;#&quot;</span><br><span class="line">	#qq: &quot;#&quot;</span><br><span class="line">	#weixin: &quot;#&quot;</span><br><span class="line">	#jianshu: &quot;#&quot;</span><br><span class="line">	#douban: &quot;#&quot;</span><br><span class="line">	#segmentfault: &quot;#&quot;</span><br><span class="line">	#bilibili: &quot;#&quot;</span><br><span class="line">	#acfun: &quot;#&quot;</span><br><span class="line">	#mail: &quot;mailto:litten225@qq.com&quot;</span><br><span class="line">	#facebook: &quot;#&quot;</span><br><span class="line">	#google: &quot;#&quot;</span><br><span class="line">	#twitter: &quot;#&quot;</span><br><span class="line">	#linkedin: &quot;#&quot;</span><br><span class="line"></span><br><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
 
 <p>主题的更换和基本配置就到这里了 更详细的配置以后会专门再开一栏</p>
@@ -699,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主题的选择"><span class="nav-number">1.</span> <span class="nav-text">主题的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#下载和切换主题"><span class="nav-number">2.</span> <span class="nav-text">下载和切换主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题的配置"><span class="nav-number">3.</span> <span class="nav-text">主题的配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-主题的选择"><span class="nav-number">1.</span> <span class="nav-text">1.主题的选择</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-下载和切换主题"><span class="nav-number">2.</span> <span class="nav-text">2.下载和切换主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-主题的配置"><span class="nav-number">3.</span> <span class="nav-text">3.主题的配置</span></a></li></ol></div>
             
 
           </div>

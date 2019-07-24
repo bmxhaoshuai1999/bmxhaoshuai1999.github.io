@@ -107,7 +107,7 @@
 
 
 
-  <meta name="keywords" content="hexo,yilia,">
+  <meta name="keywords" content="yilia,hexo,">
 
 
 
@@ -119,7 +119,7 @@
 
 
 <meta name="description" content="之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题">
-<meta name="keywords" content="hexo,yilia">
+<meta name="keywords" content="yilia,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="yilia主题配置以及问题处理">
 <meta property="og:url" content="http://yoursite.com/2019/07/23/yilia主题配置/index.html">
@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/peiok.png">
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/love.png">
 <meta property="og:image" content="http://pv2rbuaxo.bkt.clouddn.com/%E7%9C%8B%E6%9D%BF%E5%A8%98.png">
-<meta property="og:updated_time" content="2019-07-23T05:42:27.644Z">
+<meta property="og:updated_time" content="2019-07-24T09:00:17.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="yilia主题配置以及问题处理">
 <meta name="twitter:description" content="之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题">
@@ -441,26 +441,30 @@
       
         <p>之前已经完成了主题的更换，现在来说一下yilia主题的配置和一些可能会出现的问题</p>
 <a id="more"></a>
-<h1 id="配置缺失模块"><a href="#配置缺失模块" class="headerlink" title="配置缺失模块"></a>配置缺失模块</h1><p>从GitHub上面clone下来主题后，点开左边的全部文章，无法正常显示，里面也有解决办法，需要配置一些代码。<br><img src="http://pv2rbuaxo.bkt.clouddn.com/yilia_peizhierror.png" alt><br>在博客目录下运行命令行</p>
+<h1 id="1-配置缺失模块"><a href="#1-配置缺失模块" class="headerlink" title="1.配置缺失模块"></a>1.配置缺失模块</h1><p>从GitHub上面clone下来主题后，点开左边的全部文章，无法正常显示，里面也有解决办法，需要配置一些代码。<br><img src="http://pv2rbuaxo.bkt.clouddn.com/yilia_peizhierror.png" alt><br>在博客目录下运行命令行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-gennerator-json-content --save</span><br></pre></td></tr></table></figure>
 
 <p>如果这个包已经存在，会报错<br><img src="http://pv2rbuaxo.bkt.clouddn.com/baocuo.png" alt><br>博客根目录下，找到<code>_config.yml</code>，打开找到一个空白的地方复制一下配置信息</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">	meta: false</span><br><span class="line">	pages: false</span><br><span class="line">	posts:</span><br><span class="line">		title: true</span><br><span class="line">		date: true</span><br><span class="line">		path: true</span><br><span class="line">		text: false</span><br><span class="line">		raw: false</span><br><span class="line">		content: false</span><br><span class="line">		slug: false</span><br><span class="line">		updated: false</span><br><span class="line">		comments: false</span><br><span class="line">		link: false</span><br><span class="line">		permalink: false</span><br><span class="line">		excerpt: false</span><br><span class="line">		categories: false</span><br><span class="line">		tags: true</span><br></pre></td></tr></table></figure>
 
 <p>如果报错可能是格式问题<br><img src="http://pv2rbuaxo.bkt.clouddn.com/geshi.png" alt><br>保存同步文件再看你的博客，点全部文章按钮，发现已修复<br><img src="http://pv2rbuaxo.bkt.clouddn.com/peiok.png" alt></p>
-<h1 id="配置图片资源"><a href="#配置图片资源" class="headerlink" title="配置图片资源"></a>配置图片资源</h1><h2 id="添加图片资源文件夹"><a href="#添加图片资源文件夹" class="headerlink" title="添加图片资源文件夹"></a>添加图片资源文件夹</h2><p>路径为<code>themes/yilia/source/</code>下，可以添加一个imags文件夹，里面放图片资源即可</p>
+<hr>
+<h1 id="2-配置图片资源"><a href="#2-配置图片资源" class="headerlink" title="2.配置图片资源"></a>2.配置图片资源</h1><h2 id="添加图片资源文件夹"><a href="#添加图片资源文件夹" class="headerlink" title="添加图片资源文件夹"></a>添加图片资源文件夹</h2><p>路径为<code>themes/yilia/source/</code>下，可以添加一个imags文件夹，里面放图片资源即可</p>
 <h2 id="配置文件中直接引用即可"><a href="#配置文件中直接引用即可" class="headerlink" title="配置文件中直接引用即可"></a>配置文件中直接引用即可</h2><p>路径为<code>themes/yilia/_config.yml</code>，找到如下代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg</span><br><span class="line">alipay: </span><br><span class="line"># 微信二维码图片地址</span><br><span class="line">weixin: </span><br><span class="line">#你的头像url</span><br><span class="line">avatar:</span><br></pre></td></tr></table></figure>
 
 <p>根据自己的路径填写</p>
-<h1 id="文章截断（显示摘要）"><a href="#文章截断（显示摘要）" class="headerlink" title="文章截断（显示摘要）"></a>文章截断（显示摘要）</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>点击主页时，发现所有文章全都是全文显示，不利于查找，可控制显示的字数</p>
+<hr>
+<h1 id="3-文章截断（显示摘要）"><a href="#3-文章截断（显示摘要）" class="headerlink" title="3.文章截断（显示摘要）"></a>3.文章截断（显示摘要）</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>点击主页时，发现所有文章全都是全文显示，不利于查找，可控制显示的字数</p>
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>在你md格式文章想要截断的位置插入<code>&lt;!-- more --&gt;</code>即可 ,只会显示之前的，之后的需要点击阅读全文才会显示，同时注释掉以下themes/yilia/_config.yml，如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 文章太长，截断按钮文字</span><br><span class="line">#excerpt_link: more</span><br></pre></td></tr></table></figure>
 
-<h1 id="增加归档菜单"><a href="#增加归档菜单" class="headerlink" title="增加归档菜单"></a>增加归档菜单</h1><p>修改<code>themes/yilia/_config.yml</code></p>
+<hr>
+<h1 id="4-增加归档菜单"><a href="#4-增加归档菜单" class="headerlink" title="4.增加归档菜单"></a>4.增加归档菜单</h1><p>修改<code>themes/yilia/_config.yml</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">	主页: /</span><br><span class="line">	归档: /archives/index.html</span><br></pre></td></tr></table></figure>
 
-<h1 id="增加不蒜子统计"><a href="#增加不蒜子统计" class="headerlink" title="增加不蒜子统计"></a>增加不蒜子统计</h1><p>利用这个统计，可以知道你博客的访问量</p>
+<hr>
+<h1 id="5-增加不蒜子统计"><a href="#5-增加不蒜子统计" class="headerlink" title="5.增加不蒜子统计"></a>5.增加不蒜子统计</h1><p>利用这个统计，可以知道你博客的访问量</p>
 <h2 id="安装不蒜子脚本"><a href="#安装不蒜子脚本" class="headerlink" title="安装不蒜子脚本"></a>安装不蒜子脚本</h2><p>在<code>themes\yilia\layout\_partial\after-footer.ejs</code>最后添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script  async  src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
@@ -470,18 +474,20 @@
 <h2 id="单篇文章点击"><a href="#单篇文章点击" class="headerlink" title="单篇文章点击"></a>单篇文章点击</h2><p>修改<code>themes\yilia\layout\_partial\footer.ejs</code>在需要显示的地方添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 使用 pv 记录方式，每访问一次，记录一次</span><br><span class="line">&lt;span id=&quot;busuanzi_container_page_pv&quot;&gt;  本文总阅读量&lt;span id=&quot;busuanzi_value_page_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 
-<h1 id="添加鼠标点击爱心效果"><a href="#添加鼠标点击爱心效果" class="headerlink" title="添加鼠标点击爱心效果"></a>添加鼠标点击爱心效果</h1><p>在<code>themes/yilia/source/js</code>下新建文件<code>love.js</code>。在<code>love.js</code>文件中添加如下代码</p>
+<hr>
+<h1 id="6-添加鼠标点击爱心效果"><a href="#6-添加鼠标点击爱心效果" class="headerlink" title="6.添加鼠标点击爱心效果"></a>6.添加鼠标点击爱心效果</h1><p>在<code>themes/yilia/source/js</code>下新建文件<code>love.js</code>。在<code>love.js</code>文件中添加如下代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 500%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
 
 <p>在<code>themes/yilia/layout/layout.ejs</code>文件末尾添加以下代码</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <p><img src="http://pv2rbuaxo.bkt.clouddn.com/love.png" alt></p>
-<h1 id="添加看板娘"><a href="#添加看板娘" class="headerlink" title="添加看板娘"></a>添加看板娘</h1><p><img src="http://pv2rbuaxo.bkt.clouddn.com/%E7%9C%8B%E6%9D%BF%E5%A8%98.png" alt></p>
+<hr>
+<h1 id="7-添加看板娘"><a href="#7-添加看板娘" class="headerlink" title="7.添加看板娘"></a>7.添加看板娘</h1><p><img src="http://pv2rbuaxo.bkt.clouddn.com/%E7%9C%8B%E6%9D%BF%E5%A8%98.png" alt></p>
 <h2 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h2><p>hexo博客目录下输入命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
 
-<p>作者提供了很多模型包<code>https://huaji8.top/post/live2d-plugin-2.0/</code>选择你想要用的模型。记住名字</p>
+<p>作者提供了很多<a href="https://huaji8.top/post/live2d-plugin-2.0/" target="_blank" rel="noopener">模型包</a>选择你想要用的模型。记住名字</p>
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>在hexo博客目录下输入命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-koharu</span><br></pre></td></tr></table></figure>
 
@@ -565,9 +571,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"> hexo</i></a>
-          
             <a href="/tags/yilia/" rel="tag"><i class="fa fa-tag"> yilia</i></a>
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"> hexo</i></a>
           
         </div>
       
@@ -741,7 +747,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#配置缺失模块"><span class="nav-number">1.</span> <span class="nav-text">配置缺失模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置图片资源"><span class="nav-number">2.</span> <span class="nav-text">配置图片资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加图片资源文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">添加图片资源文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件中直接引用即可"><span class="nav-number">2.2.</span> <span class="nav-text">配置文件中直接引用即可</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章截断（显示摘要）"><span class="nav-number">3.</span> <span class="nav-text">文章截断（显示摘要）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">3.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加归档菜单"><span class="nav-number">4.</span> <span class="nav-text">增加归档菜单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#增加不蒜子统计"><span class="nav-number">5.</span> <span class="nav-text">增加不蒜子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装不蒜子脚本"><span class="nav-number">5.1.</span> <span class="nav-text">安装不蒜子脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加统计网站访问量"><span class="nav-number">5.2.</span> <span class="nav-text">添加统计网站访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单篇文章点击"><span class="nav-number">5.3.</span> <span class="nav-text">单篇文章点击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加鼠标点击爱心效果"><span class="nav-number">6.</span> <span class="nav-text">添加鼠标点击爱心效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#添加看板娘"><span class="nav-number">7.</span> <span class="nav-text">添加看板娘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装模块"><span class="nav-number">7.1.</span> <span class="nav-text">安装模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">7.2.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">7.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果预览"><span class="nav-number">7.4.</span> <span class="nav-text">效果预览</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-配置缺失模块"><span class="nav-number">1.</span> <span class="nav-text">1.配置缺失模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-配置图片资源"><span class="nav-number">2.</span> <span class="nav-text">2.配置图片资源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加图片资源文件夹"><span class="nav-number">2.1.</span> <span class="nav-text">添加图片资源文件夹</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件中直接引用即可"><span class="nav-number">2.2.</span> <span class="nav-text">配置文件中直接引用即可</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-文章截断（显示摘要）"><span class="nav-number">3.</span> <span class="nav-text">3.文章截断（显示摘要）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">3.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-增加归档菜单"><span class="nav-number">4.</span> <span class="nav-text">4.增加归档菜单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-增加不蒜子统计"><span class="nav-number">5.</span> <span class="nav-text">5.增加不蒜子统计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装不蒜子脚本"><span class="nav-number">5.1.</span> <span class="nav-text">安装不蒜子脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加统计网站访问量"><span class="nav-number">5.2.</span> <span class="nav-text">添加统计网站访问量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单篇文章点击"><span class="nav-number">5.3.</span> <span class="nav-text">单篇文章点击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-添加鼠标点击爱心效果"><span class="nav-number">6.</span> <span class="nav-text">6.添加鼠标点击爱心效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-添加看板娘"><span class="nav-number">7.</span> <span class="nav-text">7.添加看板娘</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装模块"><span class="nav-number">7.1.</span> <span class="nav-text">安装模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">7.2.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">7.3.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#效果预览"><span class="nav-number">7.4.</span> <span class="nav-text">效果预览</span></a></li></ol></li></ol></div>
             
 
           </div>
